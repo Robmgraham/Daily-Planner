@@ -23,33 +23,33 @@
   <div class="container">
     <div class="row">
       <!-- Timeblocks go here -->
-      <h4 class="hour col-md-10">9am<textarea class= "col-md-11" id = "9am"></textarea></h4>
+      <h4 class="hour col-md-10">9am<textarea class="col-md-11" id="9am"></textarea></h4>
       <button class="saveBtn save1"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">10am<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">10am<textarea class="col-md-11" id="10am"></textarea></h4>
       <button class="saveBtn save2"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">11am<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">11am<textarea class="col-md-11" id="11am"></textarea></h4>
       <button class="saveBtn save3"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">12pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">12pm<textarea class="col-md-11" id="12pm"></textarea></h4>
       <button class="saveBtn save4"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">1pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">1pm<textarea class="col-md-11" id="1pm"></textarea></h4>
       <button class="saveBtn save5"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">2pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">2pm<textarea class="col-md-11" id="2pm"></textarea></h4>
       <button class="saveBtn save6"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">3pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">3pm<textarea class="col-md-11" id="3pm"></textarea></h4>
       <button class="saveBtn save7"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">4pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">4pm<textarea class="col-md-11" id="4pm"></textarea></h4>
       <button class="saveBtn save8"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">5pm<textarea class= "col-md-11"></textarea></h4>
+      <h4 class="hour col-md-10">5pm<textarea class="col-md-11" id="5pm"></textarea></h4>
       <button class="saveBtn save9"><i class='fas fa-save fa-3x'></i></button>
-      
+
 
     </div>
   </div>
@@ -60,20 +60,98 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://momentjs.com/downloads/moment.js"></script>
   <script>
-    var nine = localStorage.getItem("storeText")
 
-    $("#9am").val(nine)
-    $(".save1").on("click", function(){
-      console.log("INput- "+$("#9am").val())
-      localStorage.setItem("storeText" , $("#9am").val() );
-    });
-      
-    moment().format("h:mm:ss a", );
-    console.log(moment().format("h:mm:ss a"));
+
+    var nine = localStorage.getItem("storeNineText")
+    var ten = localStorage.getItem("storeTenText")
+    var eleven = localStorage.getItem("storeElevenText")
+    var twelve = localStorage.getItem("storeTwelveText")
+    var one = localStorage.getItem("storeOneText")
+    var two = localStorage.getItem("storeTwoText")
+    var three = localStorage.getItem("storeThreeText")
+    var four = localStorage.getItem("storeFourText")
+    var five = localStorage.getItem("storeFiveText")
+
+
+    //                        ------9-----
     
+    $(".save1").on("click", function () { 
+      localStorage.setItem("storeNineText", $("#9am").val());
+    });
+    $("#9am").val(nine) 
 
 
- </script>
+    //                        ------10-----
+
+    $(".save2").on("click", function () {
+      localStorage.setItem("storeTenText", $("#10am").val());
+    });
+    $("#10am").val(ten)
+
+
+    //                        ------11-----
+
+    $(".save3").on("click", function () {
+      localStorage.setItem("storeElevenText", $("#11am").val());
+    });
+    $("#11am").val(eleven)
+
+
+    //                        ------12-----
+
+    $(".save4").on("click", function () {
+      localStorage.setItem("storeTwelveText", $("#12pm").val() );
+    });
+    $("#12pm").val(twelve)
+
+
+    //                        ------1-----
+
+    $(".save5").on("click", function () {
+      localStorage.setItem("storeOneText", $("#1pm").val() );
+    });
+    $("#1pm").val(one)
+
+
+    //                        ------2-----
+
+    $(".save6").on("click", function () {
+      localStorage.setItem("storeTwoText", $("#2pm").val() );
+    });
+    $("#2pm").val(two)
+
+
+    //                        ------3-----
+
+    $(".save7").on("click", function () {
+      localStorage.setItem("storeThreeText", $("#3pm").val() );
+    });
+    $("#3pm").val(three)
+
+
+    //                        ------4-----
+
+    $(".save8").on("click", function(){
+      localStorage.setItem("storeFourText", $("#4pm").val() );
+    });
+    $("#4pm").val(four)
+
+
+    //                        ------5-----
+
+    $(".save9").on("click", function(){
+      localStorage.setItem("storeFiveText", $("#5pm").val() );
+    });
+    $("#5pm").val(five)
+
+
+
+    moment().format("h:mm:ss a",);
+    console.log(moment().format("h:mm:ss a"));
+
+
+
+  </script>
 </body>
 
 </html>
