@@ -10,7 +10,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="javasheet" href="script.js" />
+  <!-- <link rel="javasheet" href="script.js" /> --> 
   <title>Work Day Scheduler</title>
 </head>
 
@@ -23,16 +23,16 @@
   <div class="container">
     <div class="row">
       <!-- Timeblocks go here -->
-      <h4 class="hour col-md-10">9am<textarea class="col-md-11" id="9am"></textarea></h4>
+      <h4 class="hour col-md-10">9am<textarea class="col-md-11 " id="9am"></textarea></h4>
       <button class="saveBtn save1"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">10am<textarea class="col-md-11" id="10am"></textarea></h4>
+      <h4 class="hour col-md-10">10am<textarea class="col-md-11 " id="10am"></textarea></h4>
       <button class="saveBtn save2"><i class='fas fa-save fa-3x'></i></button>
 
       <h4 class="hour col-md-10">11am<textarea class="col-md-11" id="11am"></textarea></h4>
       <button class="saveBtn save3"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">12pm<textarea class="col-md-11" id="12pm"></textarea></h4>
+      <h4 class="hour col-md-10">12pm<textarea class="col-md-11 " id="12pm"></textarea></h4>
       <button class="saveBtn save4"><i class='fas fa-save fa-3x'></i></button>
 
       <h4 class="hour col-md-10">1pm<textarea class="col-md-11" id="1pm"></textarea></h4>
@@ -144,10 +144,36 @@
     });
     $("#5pm").val(five)
 
+    //                        ------Moment.js-------------time is set to military
+    
+    var pastTime = moment().subtract(1, "hour").format("H")
+    var presentTime = moment().format("H")
+    var futureTime = moment().add(1, "hour").format("H")
+     
+    
+    
+      if (".hour1"=pastTime)addClass(".past")
+      if (".hour1"=presentTime)addClass(".present")
+      if (".hour1"=presentTime)addClass(".future")
+      
 
 
-    moment().format("h:mm:ss a",);
-    console.log(moment().format("h:mm:ss a"));
+    console.log(currentTime)
+    console.log(pastTime)
+    console.log(presentTime)
+    console.log(futureTime)
+    
+
+    
+    
+    
+    
+    
+    // $(moment().format("LT").isSame("hours").then(".row, .present")
+    // );
+
+
+   
 
 
 
