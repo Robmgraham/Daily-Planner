@@ -10,7 +10,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- <link rel="javasheet" href="script.js" /> --> 
+  <!-- <link rel="javasheet" href="script.js" /> -->
   <title>Work Day Scheduler</title>
 </head>
 
@@ -23,31 +23,31 @@
   <div class="container">
     <div class="row">
       <!-- Timeblocks go here -->
-      <h4 class="hour col-md-10">9am<textarea class="col-md-11 " id="9am"></textarea></h4>
+      <h4 class="hour col-md-10 fluid ">9am<textarea class="col-md-11" id="9hours"></textarea></h4>
       <button class="saveBtn save1"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">10am<textarea class="col-md-11 " id="10am"></textarea></h4>
+      <h4 class="hour col-md-10 ">10am<textarea class="col-md-11" id="10hours"></textarea></h4>
       <button class="saveBtn save2"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">11am<textarea class="col-md-11" id="11am"></textarea></h4>
+      <h4 class="hour col-md-10 ">11am<textarea class="col-md-11" id="11hours"></textarea></h4>
       <button class="saveBtn save3"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">12pm<textarea class="col-md-11 " id="12pm"></textarea></h4>
+      <h4 class="hour col-md-10 ">12pm<textarea class="col-md-11 " id="12hours"></textarea></h4>
       <button class="saveBtn save4"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">1pm<textarea class="col-md-11" id="1pm"></textarea></h4>
+      <h4 class="hour col-md-10 ">1pm<textarea class="col-md-11" id="13hours"></textarea></h4>
       <button class="saveBtn save5"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">2pm<textarea class="col-md-11" id="2pm"></textarea></h4>
+      <h4 class="hour col-md-10 ">2pm<textarea class="col-md-11" id="14hours"></textarea></h4>
       <button class="saveBtn save6"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">3pm<textarea class="col-md-11" id="3pm"></textarea></h4>
+      <h4 class="hour col-md-10 ">3pm<textarea class="col-md-11" id="15hours"></textarea></h4>
       <button class="saveBtn save7"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">4pm<textarea class="col-md-11" id="4pm"></textarea></h4>
+      <h4 class="hour col-md-10 ">4pm<textarea class="col-md-11" id="16hours"></textarea></h4>
       <button class="saveBtn save8"><i class='fas fa-save fa-3x'></i></button>
 
-      <h4 class="hour col-md-10">5pm<textarea class="col-md-11" id="5pm"></textarea></h4>
+      <h4 class="hour col-md-10">5pm<textarea class="col-md-11" id="17hours"></textarea></h4>
       <button class="saveBtn save9"><i class='fas fa-save fa-3x'></i></button>
 
 
@@ -74,108 +74,95 @@
 
 
     //                        ------9-----
-    
-    $(".save1").on("click", function () { 
-      localStorage.setItem("storeNineText", $("#9am").val());
+
+    $(".save1").on("click", function () {
+      localStorage.setItem("storeNineText", $("#9hours").val());
     });
-    $("#9am").val(nine) 
+    $("#9hours").val(nine)
 
 
     //                        ------10-----
 
     $(".save2").on("click", function () {
-      localStorage.setItem("storeTenText", $("#10am").val());
+      localStorage.setItem("storeTenText", $("#10hours").val());
     });
-    $("#10am").val(ten)
+    $("#10hours").val(ten)
 
 
     //                        ------11-----
 
     $(".save3").on("click", function () {
-      localStorage.setItem("storeElevenText", $("#11am").val());
+      localStorage.setItem("storeElevenText", $("#11hours").val());
     });
-    $("#11am").val(eleven)
+    $("#11hours").val(eleven)
 
 
     //                        ------12-----
 
     $(".save4").on("click", function () {
-      localStorage.setItem("storeTwelveText", $("#12pm").val() );
+      localStorage.setItem("storeTwelveText", $("#12hours").val());
     });
-    $("#12pm").val(twelve)
+    $("#12hours").val(twelve)
 
 
     //                        ------1-----
 
     $(".save5").on("click", function () {
-      localStorage.setItem("storeOneText", $("#1pm").val() );
+      localStorage.setItem("storeOneText", $("#13hours").val());
     });
-    $("#1pm").val(one)
+    $("#13hours").val(one)
 
 
     //                        ------2-----
 
     $(".save6").on("click", function () {
-      localStorage.setItem("storeTwoText", $("#2pm").val() );
+      localStorage.setItem("storeTwoText", $("#14hours").val());
     });
-    $("#2pm").val(two)
+    $("#14hours").val(two)
 
 
     //                        ------3-----
 
     $(".save7").on("click", function () {
-      localStorage.setItem("storeThreeText", $("#3pm").val() );
+      localStorage.setItem("storeThreeText", $("#15hours").val());
     });
-    $("#3pm").val(three)
+    $("#15hours").val(three)
 
 
     //                        ------4-----
 
-    $(".save8").on("click", function(){
-      localStorage.setItem("storeFourText", $("#4pm").val() );
+    $(".save8").on("click", function () {
+      localStorage.setItem("storeFourText", $("#16hours").val());
     });
-    $("#4pm").val(four)
+    $("#16hours").val(four)
 
 
     //                        ------5-----
 
-    $(".save9").on("click", function(){
-      localStorage.setItem("storeFiveText", $("#5pm").val() );
+    $(".save9").on("click", function () {
+      localStorage.setItem("storeFiveText", $("#17hours").val());
     });
-    $("#5pm").val(five)
+    $("#17hours").val(five)
 
     //                        ------Moment.js-------------time is set to military
-    
-    var pastTime = moment().subtract(1, "hour").format("H")
-    var presentTime = moment().format("H")
-    var futureTime = moment().add(1, "hour").format("H")
-     
-    
-    
-      if (".hour1"=pastTime)addClass(".past")
-      if (".hour1"=presentTime)addClass(".present")
-      if (".hour1"=presentTime)addClass(".future")
-      
 
+    $(document).ready(function () {
+      var timeArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-    console.log(currentTime)
-    console.log(pastTime)
-    console.log(presentTime)
-    console.log(futureTime)
-    
+      timeArray.forEach(function (i) {
+        var userInput = $(`#${i}hours`)
 
-    
-    
-    
-    
-    
-    // $(moment().format("LT").isSame("hours").then(".row, .present")
-    // );
+        if (i < moment().format("H")) {
+          userInput.addClass("past")
 
+        } else if (i = moment().format("H")) {
+          userInput.addClass("present")
 
-   
-
-
+        } else if (i > moment().format("H")) {
+          userInput.addClass("future")
+        };
+      })
+    });
 
   </script>
 </body>
