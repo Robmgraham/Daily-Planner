@@ -152,13 +152,13 @@
       timeArray.forEach(function (i) {
         var userInput = $(`#${i}hours`)
 
-        if (i < moment().format("H")) {
+        if (i < moment().format("HH")) {
           userInput.addClass("past")
 
-        } else if (i = moment().format("H")) {
+        } else if (i = moment().format("HH")) {
           userInput.addClass("present")
 
-        } else if (i > moment().format("H")) {
+        } else if (i > moment().format("HH")) {
           userInput.addClass("future")
         };
       })
