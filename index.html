@@ -155,7 +155,9 @@
         if (i < moment().format("HH")) {
           userInput.addClass("past")
 
-        } else if (i = moment().format("HH")) {
+
+        } else if (i == moment().format("HH")) {
+
           userInput.addClass("present")
 
         } else if (i > moment().format("HH")) {
