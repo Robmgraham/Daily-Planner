@@ -17,7 +17,7 @@
 <body>
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p class="lead">A simple planning app for scheduling your work day. Enter an event and then click the save icon to save your event.</p>
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
@@ -152,13 +152,15 @@
       timeArray.forEach(function (i) {
         var userInput = $(`#${i}hours`)
 
-        if (i < moment().format("H")) {
+        if (i < moment().format("HH")) {
           userInput.addClass("past")
 
-        } else if (i == moment().format("H")) {
+
+        } else if (i == moment().format("HH")) {
+
           userInput.addClass("present")
 
-        } else if (i > moment().format("H")) {
+        } else if (i > moment().format("HH")) {
           userInput.addClass("future")
         };
       })
